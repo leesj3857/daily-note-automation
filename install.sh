@@ -60,9 +60,16 @@ if [ ! -f "$CONFIG_FILE" ]; then
     # Vault 경로 입력
     while true; do
         read -p "Obsidian vault의 절대 경로를 입력하세요: " vault_path
+        # 앞뒤 공백 제거
+        vault_path="${vault_path#"${vault_path%%[![:space:]]*}"}"
+        vault_path="${vault_path%"${vault_path##*[![:space:]]}"}"
+        # 감싼 따옴표 제거 ('...' 또는 "...")
+        if [[ "$vault_path" =~ ^\'(.*)\'$ ]] || [[ "$vault_path" =~ ^\"(.*)\"$ ]]; then
+            vault_path="${BASH_REMATCH[1]}"
+        fi
         # ~ 확장
         vault_path="${vault_path/#\~/$HOME}"
-        
+
         if [ -z "$vault_path" ]; then
             echo "   ❌ 경로를 입력해주세요."
             continue
