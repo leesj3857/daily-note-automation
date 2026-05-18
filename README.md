@@ -2,6 +2,8 @@
 
 > Git 변경사항을 분석해서 Obsidian 데일리 노트에 자동으로 기록하는 CLI 도구
 
+🌐 [Read in English](README.en.md)
+
 Claude Code를 활용해 매일 작업 내용을 자동으로 정리합니다. 더 이상 "오늘 뭐 했지?" 회상하면서 노트 쓰지 마세요.
 
 ## ✨ 주요 기능
@@ -96,9 +98,18 @@ cd daily-note-automation
 ```
 
 설치 시 다음을 물어봅니다:
-- Obsidian vault 경로 (예: `~/Documents/Obsidian Vault/MyVault`)
-- 데일리 노트 폴더명 (기본: `01_Daily`)
-- 코드 변경 노트 폴더명 (기본: `05_CodeChanges`)
+
+- **노트 언어** (한국어 / English) — 데일리 노트 템플릿과 dend가 만드는 요약/회고 노트가 선택한 언어로 작성됩니다. 언어 선택 전 안내 메시지는 영어로 나오고, 선택한 뒤로는 설치 흐름도 해당 언어로 바뀝니다.
+- **노트가 저장될 폴더 경로**
+  - vault의 **루트 경로**를 그대로 쓰거나
+    예: `~/Documents/Obsidian/MyVault`
+  - vault 안의 **특정 하위 폴더 경로**를 쓰면 됩니다 — 작업 노트를 vault 루트가 아니라 특정 영역(예: `Work/`) 안에 정리하고 싶다면 그 폴더까지 포함한 경로를 입력하세요.
+    예: `~/Documents/Obsidian/MyVault/Work`
+  - 입력한 경로 **바로 아래**에 데일리 폴더(`01_Daily`)와 코드 변경 폴더(`05_CodeChanges`)가 만들어집니다.
+- **데일리 노트 폴더명** (기본: `01_Daily`)
+- **코드 변경 노트 폴더명** (기본: `05_CodeChanges`)
+
+> 언어를 나중에 바꾸고 싶다면 `~/.daily-noterc`의 `NOTE_LANG` 값을 `ko` 또는 `en`으로 수정하거나 `./install.sh`를 다시 실행하세요.
 
 설치 후 새 터미널을 열거나:
 ```bash

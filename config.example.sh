@@ -1,28 +1,42 @@
-# Daily Note Automation 설정
-# 이 파일은 ~/.daily-noterc 에 위치합니다.
-# install.sh가 자동으로 생성하지만, 직접 편집해도 됩니다.
+# Daily Note Automation config
+# This file lives at ~/.daily-noterc
+# install.sh creates it automatically, but you can also edit it by hand.
 
-# Obsidian vault의 절대 경로
-# 예: "/Users/leesj3857/Documents/Obsidian Vault/MyVault"
+# Note language for daily-note templates and the dend prompt.
+#   ko = 한국어
+#   en = English
+NOTE_LANG="ko"
+
+# Folder under which daily/changes notes are stored.
+#
+# This can be either:
+#   - The Obsidian vault root, e.g.
+#       "/Users/you/Documents/Obsidian/MyVault"
+#   - A sub-folder inside the vault, if you want to keep work notes
+#     organized under a specific area, e.g.
+#       "/Users/you/Documents/Obsidian/MyVault/Work"
+#
+# The DAILY_DIR_NAME and CHANGES_DIR_NAME folders below will be created
+# under this path (not under the vault root).
 VAULT=""
 
-# 데일리 노트 폴더 이름 (vault 안의 상대 경로)
-# 예: "01_Daily" 또는 "Daily Notes"
+# Daily-notes folder name (relative to VAULT)
+# e.g. "01_Daily" or "Daily Notes"
 DAILY_DIR_NAME="01_Daily"
 
-# 코드 변경 노트 폴더 이름
+# Code-changes folder name (relative to VAULT)
 CHANGES_DIR_NAME="05_CodeChanges"
 
-# (선택) 데일리 노트 템플릿 경로 - 비워두면 기본 양식 사용
-# 예: "_Templates/daily.md"
+# (Optional) custom daily-note template path. Leave empty for the built-in.
+# e.g. "_Templates/daily.md"
 TEMPLATE_DAILY=""
 
-# 자동 계산되는 경로 (수정하지 마세요)
+# Derived (do not edit)
 DAILY_DIR="$VAULT/$DAILY_DIR_NAME"
 CHANGES_DIR="$VAULT/$CHANGES_DIR_NAME"
 
-# 스크립트 디렉토리 (스냅샷, 로그 저장 위치)
+# Where snapshots and the token-usage log are stored
 SCRIPT_DIR="$HOME/.daily-note-automation"
 
-# diff 최대 길이 (Claude Code 컨텍스트 제한)
+# Max diff length sent to Claude Code (context-window guard)
 MAX_DIFF_LEN=40000
