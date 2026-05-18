@@ -3,7 +3,7 @@
 # install.sh가 자동으로 생성하지만, 직접 편집해도 됩니다.
 
 # Obsidian vault의 절대 경로
-# 예: "/Users/yourname/Documents/Obsidian Vault/MyVault"
+# 예: "/Users/leesj3857/Documents/Obsidian Vault/MyVault"
 VAULT=""
 
 # 데일리 노트 폴더 이름 (vault 안의 상대 경로)

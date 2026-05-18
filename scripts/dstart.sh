@@ -6,7 +6,7 @@ export PAGER=cat
 
 # ============================================================
 # dstart.sh - 프로젝트 시작
-# https://github.com/yourname/daily-note-automation
+# https://github.com/leesj3857/daily-note-automation
 # ============================================================
 
 # --- 설정 파일 로드 ---

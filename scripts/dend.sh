@@ -6,7 +6,7 @@ export PAGER=cat
 
 # ============================================================
 # dend.sh - 프로젝트 마감 + git 변경 분석
-# https://github.com/yourname/daily-note-automation
+# https://github.com/leesj3857/daily-note-automation
 # ============================================================
 
 CONFIG_FILE="$HOME/.daily-noterc"
