@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# 페이저 비활성화 (탭 닫기 경고 방지)
+export GIT_PAGER=cat
+export PAGER=cat
+
 # ============================================================
 # dend.sh - 프로젝트 마감 + git 변경 분석
 # https://github.com/yourname/daily-note-automation

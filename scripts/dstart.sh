@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# 페이저 비활성화 (탭 닫기 경고 방지)
+export GIT_PAGER=cat
+export PAGER=cat
+
 # ============================================================
 # dstart.sh - 프로젝트 시작
 # https://github.com/yourname/daily-note-automation
