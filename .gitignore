@@ -1,0 +1,20 @@
+# 로컬 데이터 (절대 커밋 안 됨)
+*.snapshot-*
+.token-usage.log
+*.diff
+.daily-noterc
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor
+.vscode/
+.idea/
+
+# 백업
+*.bak
+*.backup
